@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BQ24295ctrl" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug/bin/BQ24295ctrl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug/obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="src/BQ24295" />
+				</Compiler>
+				<Linker>
+					<Add library="pthread" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="src/BQ24295/config/BQ24295.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/BQ24295/devices.h" />
+		<Unit filename="src/BQ24295/doc/BQ24295.pdf" />
+		<Unit filename="src/BQ24295/i2c_BQ24295.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/BQ24295/i2c_BQ24295.h" />
+		<Unit filename="src/BQ24295ctrl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/i2c/i2c_readme.txt" />
+		<Unit filename="src/i2c/smbus.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/i2c/smbus.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
