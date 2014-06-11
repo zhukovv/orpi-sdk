@@ -570,11 +570,12 @@ static void *readBQ24295(void *thtread_id)
 		check_status();
 		display_IINLIM_mode();
 
+		data.REG00.IINLIM = BQ2xFLG_IINLIM_3000mA;
+		write_registers();
+
 		read_registers();
 
 		dump_registers();
-		data.REG00.IINLIM = BQ2xFLG_IINLIM_3000mA;
-		write_registers();
 
 		if(drv.fp.proc !=NULL)
 		{

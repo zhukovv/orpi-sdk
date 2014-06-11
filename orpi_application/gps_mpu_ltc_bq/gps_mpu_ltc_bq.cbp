@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/gps_mpu_ltc_bq" prefix_auto="1" extension_auto="1" />
+				<Option output="gps_mpu_ltc_bq" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/gps_mpu_ltc_bq" prefix_auto="1" extension_auto="1" />
+				<Option output="gps_mpu_ltc_bq" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -36,7 +36,6 @@
 			<Add option="-lncurses" />
 			<Add option="-lbcm2835" />
 		</Linker>
-		<Unit filename="gps_mpu_ltc_bq.cpp" />
 		<Unit filename="../../libraries/GPS/gps.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -86,6 +85,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../../libraries/mpu9150/vector3d.h" />
+		<Unit filename="gps_mpu_ltc_bq.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

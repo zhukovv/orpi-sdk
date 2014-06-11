@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <devices.h>
 #include <i2c_BQ24295.h>
 
@@ -21,6 +22,8 @@ int main(void)
 	bq2x.read.ptr = &bq2x_data;
 	bq2x.read.size = sizeof(bq2x_data);
 	create_BQ24295(bq2x);
-	pause();
+
+//	pause();
+usleep(2000000);
 	return EXIT_SUCCESS;
 }
