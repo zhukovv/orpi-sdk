@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gps_mpu_ltc_bq" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/gps_mpu_ltc_bq" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/gps_mpu_ltc_bq" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add option="-lncurses" />
+			<Add option="-lbcm2835" />
+		</Linker>
+		<Unit filename="gps_mpu_ltc_bq.cpp" />
+		<Unit filename="../../libraries/GPS/gps.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/GPS/gps.h" />
+		<Unit filename="../../libraries/GPS/nmea.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/GPS/nmea.h" />
+		<Unit filename="../../libraries/GPS/serial.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/GPS/serial.h" />
+		<Unit filename="../../libraries/I2C/I2C_Bus.h" />
+		<Unit filename="../../libraries/I2C/I2C_bus.cpp" />
+		<Unit filename="../../libraries/I2C/smbus.cpp" />
+		<Unit filename="../../libraries/I2C/smbus.h" />
+		<Unit filename="../../libraries/mpu9150/README.md" />
+		<Unit filename="../../libraries/mpu9150/dmpKey.h" />
+		<Unit filename="../../libraries/mpu9150/dmpmap.h" />
+		<Unit filename="../../libraries/mpu9150/inv_mpu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/mpu9150/inv_mpu.h" />
+		<Unit filename="../../libraries/mpu9150/inv_mpu_dmp_motion_driver.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/mpu9150/inv_mpu_dmp_motion_driver.h" />
+		<Unit filename="../../libraries/mpu9150/linux_glue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/mpu9150/linux_glue.h" />
+		<Unit filename="../../libraries/mpu9150/local_defaults.h" />
+		<Unit filename="../../libraries/mpu9150/mpu9150.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/mpu9150/mpu9150.h" />
+		<Unit filename="../../libraries/mpu9150/mpu9150_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/mpu9150/mpu9150_app.h" />
+		<Unit filename="../../libraries/mpu9150/mpu9150_app.h.gch" />
+		<Unit filename="../../libraries/mpu9150/quaternion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/mpu9150/quaternion.h" />
+		<Unit filename="../../libraries/mpu9150/vector3d.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../libraries/mpu9150/vector3d.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
