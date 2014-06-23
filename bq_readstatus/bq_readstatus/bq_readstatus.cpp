@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <../../../libraries/I2C/I2C_Bus.h>
+#include "../../libraries/I2C/I2C_Bus.h"
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
@@ -38,7 +38,7 @@ while(!i)
     else i = 0;
 // ----------------------------------------------
 //          Reading REGs
-    bq2x.readBlock(0, 10, bq2x_regs)
+    bq2x.readBlock(0, 10, bq2x_regs);
 
     system("clear");
     /** REG_0x00 */
@@ -53,7 +53,7 @@ while(!i)
             (bq2x_regs[0]>>4 & 0x01)*0.16 + (bq2x_regs[0]>>3 & 0x01)*0.08;
     printf("Input voltage limit: %.2f\n\r", 3.88 + tmp);
 
-    printf("Input current limit: ")
+    printf("Input current limit: ");
     switch(bq2x_regs[0] & 0x07)
     {
         case 0b000: printf("100 mA"); break;
@@ -77,7 +77,7 @@ while(!i)
     tmp = (bq2x_regs[1]>>3 & 0x01)*0.4+(bq2x_regs[1]>>2 & 0x01)*0.2+(bq2x_regs[1]>>1 & 0x01)*0.1;
     printf("%.2f\n\r", 3 + tmp);
 
-    tmp = (bq2x_regs[2]>>2) * 0.64;
+    tmp = (bq2x_regs[2]>>2) * 0.064;
     printf("I_charge: %.2f A\n\r", 0.512 + tmp);
 
     tmp = (bq2x_regs[4]>>2) * 0.016;
@@ -127,6 +127,10 @@ while(!i)
 
 
     printf("\n\r     FAULT:     \n\r");
+    printf("WATCHDOG:  ");
+    if(bq2x_regs[9]>>7 == 1) printf("Timer expiration\n\r");
+    else printf("Normal\n\r");
+
     printf("OTG: ");
     if(bq2x_regs[9] >> 6 & 0b1)
         printf("VBUS ovrld or bat. is too low\n\r");
@@ -151,6 +155,12 @@ while(!i)
 
 
 
+
+    printf("\n\r----------------------\n\r");
+    printf("R0: 0x%02X, R1: 0x%02X, R2: 0x%02X, R3: 0x%02X, R4: 0x%02X\n\r",
+           bq2x_regs[0], bq2x_regs[1], bq2x_regs[2], bq2x_regs[3], bq2x_regs[4]);
+    printf("R5: 0x%02X, R6: 0x%02X, R7: 0x%02X, R8: 0x%02X, R9: 0x%02X",
+           bq2x_regs[5], bq2x_regs[6], bq2x_regs[7], bq2x_regs[8], bq2x_regs[9]);
 
     printf("\n\r----------------------\n\r");
     printf("Press \'q\' to exit ");
