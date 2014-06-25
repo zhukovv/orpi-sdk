@@ -54,7 +54,7 @@ uint8_t get_key(void)
         }
         bcm2835_gpio_set(row[i]);
     }
-    bcm2835_delay(60);
+    bcm2835_delay(20);
     return c;
 
 }
