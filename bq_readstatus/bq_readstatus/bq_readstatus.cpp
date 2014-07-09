@@ -18,13 +18,13 @@ int main()
 
     I2CBus bq2x("/dev/i2c-1");
     bq2x.addrSet(0x6B);
-    bq2x.writeByte(0x00, 0x5F);
+   /* bq2x.writeByte(0x00, 0x5F);
     bq2x.writeByte(0x01, 0x3B);
     bq2x.writeByte(0x02, 0x80);
     bq2x.writeByte(0x03, 0x11);
     bq2x.writeByte(0x04, 0xB2);
     bq2x.writeByte(0x05, 0x9C);
-    bq2x.writeByte(0x06, 0x90);
+    bq2x.writeByte(0x06, 0x90);*/
 
     initscr();
     timeout(0);
