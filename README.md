@@ -8,9 +8,9 @@
 
 *keypad* - sample of working with matrix keypad
 
-*modem* - script for 3G connection for some mobile operators. You can tweak it for yours, just change CUSTOM_APN, APN_USER and APN_PASS
+*modem* - scripts for 3G connection for some mobile operators. You can tweak it for yours, just change CUSTOM_APN, APN_USER and APN_PASS
 
-*scrips* - some useful scripts
+*scripts* - some useful scripts
 
 *orpi_application* - read data from all the sensors
 
